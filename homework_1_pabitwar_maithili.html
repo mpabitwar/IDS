@@ -127,12 +127,12 @@ $(document).ready(function () {
 
 <p>My Github repository for my assignments can be found at this URL: <a href="https://github.com/mpabitwar/compscix-415-2-assignments" class="uri">https://github.com/mpabitwar/compscix-415-2-assignments</a></p>
 <pre class="r"><code>library(mdsr)
-library(tidyverse)
-data(&quot;WorldCities&quot;)</code></pre>
+library(tidyverse)</code></pre>
 <p>QUESTION 1: How many observations and variables are there in this data set? What are some of the variable names?<br />
 1) There are 23,018 observations and 10 variables in this dataset.<br />
 2) Here are some of the variable names: code, name, latitude, longitude, country, countryRegion, population, regionCode, region, etc.</p>
-<pre class="r"><code>glimpse(&quot;WorldCities&quot;)</code></pre>
+<pre class="r"><code>data(&quot;WorldCities&quot;)
+glimpse(&quot;WorldCities&quot;)</code></pre>
 <pre><code>##  chr &quot;WorldCities&quot;</code></pre>
 <pre class="r"><code>WorldCities &lt;- head(WorldCities, 200)
 country_col &lt;- WorldCities$country

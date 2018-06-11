@@ -14,13 +14,13 @@ My Github repository for my assignments can be found at this URL: https://github
 ```{r load_packages, warning=FALSE, message=FALSE}
 library(mdsr)
 library(tidyverse)
-data("WorldCities")
 ```
 QUESTION 1: How many observations and variables are there in this data set? What are some of the variable names?                      
 1) There are 23,018 observations and 10 variables in this dataset.  
 2) Here are some of the variable names: code, name, latitude, longitude, country, countryRegion, population, regionCode, region, etc.
 
 ```{r}
+data("WorldCities")
 glimpse("WorldCities")
 WorldCities <- head(WorldCities, 200)
 country_col <- WorldCities$country
