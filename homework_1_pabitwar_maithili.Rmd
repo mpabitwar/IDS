@@ -21,8 +21,8 @@ QUESTION 1: How many observations and variables are there in this data set? What
 
 ```{r}
 data("WorldCities")
-glimpse("WorldCities")
-WorldCities <- head(WorldCities, 200)
+glimpse(WorldCities)
+WorldCities <- head(WorldCities, 200) 
 country_col <- WorldCities$country
 unique(country_col)
 ```
@@ -33,10 +33,11 @@ region_col <- WorldCities$region
 unique(region_col)
 ```
 ---
-Extract data tidy way
-```{r} country_col <- select(WorldCities, country)
+Extract data tidy way```{r} 
+country_col <- select(WorldCities, country)
 country_col <- WorldCities %>% select(country)
-WorldCities %>% select(region) %>% head(5)```
+WorldCities %>% select(region) %>% head(5)
+```
 ---
 
 QUESTION 3: Can you extract and show the unique entries from the country column in WorldCities using one line of code and two %>% operators? The output will look like this:
@@ -54,7 +55,9 @@ QUESTION 4: Make one more histogram of the population and add a new x-label, a n
 WorldCities %>% ggplot(aes(x = population)) + 
 geom_histogram() +
 xlab('City Population') +
-ylab('# Cities') +  
+ylab('Frequency') +  
 ggtitle('Distribution of City Populations') +
 theme_bw()  
 ```
+
+
